@@ -23,15 +23,22 @@ import { EventsAppComponent } from "./events-app.component";
 import { NavBarComponent } from "./nav/navbar.component";
 import { Error404Component } from "./errors/404.component";
 
-import { TOASTR_TOKEN, Toastr, JQ_TOKEN, CollapsibleWellComponent, SimpleModalComponent, ModalTriggerDirective } from "./common";
+import {
+  TOASTR_TOKEN,
+  Toastr,
+  JQ_TOKEN,
+  CollapsibleWellComponent,
+  SimpleModalComponent,
+  ModalTriggerDirective
+} from "./common";
 import { AuthService } from "./user/auth.service";
 
 import { appRoutes } from "./routes";
 
 import { HttpClientModule } from "@angular/common/http";
 
-let toastr: Toastr = window['toastr'];
-let jQuery = window['$'];
+let toastr: Toastr = window["toastr"];
+let jQuery = window["$"];
 
 @NgModule({
   declarations: [
@@ -61,7 +68,13 @@ let jQuery = window['$'];
     AuthService,
     { provide: "canDeactivateCreateEvent", useValue: checkDirtyState }
   ],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }), FormsModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, { preloadingStrategy: PreloadAllModules }),
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule {}

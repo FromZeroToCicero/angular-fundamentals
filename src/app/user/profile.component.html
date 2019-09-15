@@ -8,10 +8,22 @@
       autocomplete="off"
       novalidate
     >
-      <div class="form-group" [ngClass]="{'error' : !validateFirstName() }">
+      <div class="form-group" [ngClass]="{ error: !validateFirstName() }">
         <label for="firstName">First Name:</label>
-        <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.required">Required</em>
-        <em *ngIf="!validateFirstName() && profileForm.controls.firstName.errors.pattern">Must start with a letter</em>
+        <em
+          *ngIf="
+            !validateFirstName() &&
+            profileForm.controls.firstName.errors.required
+          "
+          >Required</em
+        >
+        <em
+          *ngIf="
+            !validateFirstName() &&
+            profileForm.controls.firstName.errors.pattern
+          "
+          >Must start with a letter</em
+        >
         <input
           formControlName="firstName"
           id="firstName"
@@ -20,7 +32,7 @@
           placeholder="First Name..."
         />
       </div>
-      <div class="form-group" [ngClass]="{'error' : !validateLastName() }">
+      <div class="form-group" [ngClass]="{ error: !validateLastName() }">
         <label for="lastName">Last Name:</label>
         <em *ngIf="!validateLastName()">Required</em>
         <input
@@ -36,7 +48,12 @@
       <button type="button" class="btn btn-default" (click)="cancel()">
         Cancel
       </button>
-      <button type="button" class="btn btn-warning" style="float: right;" (click)="logout()">
+      <button
+        type="button"
+        class="btn btn-warning"
+        style="float: right;"
+        (click)="logout()"
+      >
         Logout
       </button>
     </form>

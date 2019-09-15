@@ -10,9 +10,7 @@ import { IEvent } from "./shared";
       <hr />
       <div class="row">
         <div *ngFor="let event of events" class="col-md-5">
-          <app-event-thumbnail
-            [event]="event"
-          ></app-event-thumbnail>
+          <app-event-thumbnail [event]="event"></app-event-thumbnail>
         </div>
       </div>
     </div>

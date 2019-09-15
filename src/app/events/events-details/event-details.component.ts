@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { EventService } from "../shared/event.service";
 import { ActivatedRoute } from "@angular/router";
 import { IEvent } from "..";
-import { ISession } from '../shared';
+import { ISession } from "../shared";
 
 @Component({
   templateUrl: "./event-details.component.html",
@@ -15,27 +15,29 @@ import { ISession } from '../shared';
       .event-image {
         height: 100px;
       }
-      a { cursor: pointer; }
+      a {
+        cursor: pointer;
+      }
     `
   ]
 })
 export class EventDetailsComponent {
   event: IEvent;
   addMode: boolean;
-  filterBy: string = 'all';
-  sortBy: string = 'votes';
+  filterBy: string = "all";
+  sortBy: string = "votes";
 
   constructor(
     private eventService: EventService,
     private route: ActivatedRoute
   ) {}
-  
+
   ngOnInit() {
-    this.route.data.forEach((data) => {
-        this.event = data['event'];
-        this.addMode = false;
-        this.filterBy = 'all';
-        this.sortBy = 'votes';
+    this.route.data.forEach(data => {
+      this.event = data["event"];
+      this.addMode = false;
+      this.filterBy = "all";
+      this.sortBy = "votes";
     });
   }
 
