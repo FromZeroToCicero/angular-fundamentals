@@ -2,8 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
 
-<img src="./src/assets/images/app-screen-1.png" alt="Xeraph-FZTC" width="800" />
-<img src="./src/assets/images/app-screen-2.png" alt="Xeraph-FZTC" width="800" />
+<img src="./src/assets/images/app-screen-1.png" alt="NgFundamentals-FZTC" width="800" />
+<img src="./src/assets/images/app-screen-2.png" alt="NgFundamentals-FZTC" width="800" />
 
 ## Development server
 
